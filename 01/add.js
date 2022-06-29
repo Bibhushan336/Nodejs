@@ -1,3 +1,4 @@
+const hello = require('./hello.js')
 
 
 function add(a, b) {
@@ -5,3 +6,5 @@ function add(a, b) {
 }
 
 console.log(add(5,6))
+
+hello()
