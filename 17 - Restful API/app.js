@@ -7,6 +7,15 @@
 // })
 
 // server.listen(3000);
+// app.post('/', (req, res) => {
+
+// })
+// app.put('/', (req, res) => {
+
+// })
+// app.delete('/', (req, res) => {
+
+// })
 
 const express = require('express')
 const app = express()
@@ -20,16 +29,10 @@ app.get('/', (req, res) => {
 app.get('/api/courses', (req, res) =>{
     res.send([1,2,3]);
 })
-// app.post('/', (req, res) => {
 
-// })
-// app.put('/', (req, res) => {
-
-// })
-// app.delete('/', (req, res) => {
-
-// })
-
+app.get('/api/course/:id',(req, res) => {
+    res.send(req.params.id)
+})
 
 // environment variable
 //PORT
