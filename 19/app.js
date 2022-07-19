@@ -5,17 +5,18 @@ const express = require('express')
 const app = express()
 
 
-
-app.use((req, res, next) => {
-    console.log('in the middleware')
+app.use('/', (req, res, next) => {
+    console.log('this always runs')
     next()
 })
-
-app.use((req, res, next) => {
-    console.log('in another middleware')
+app.use('/hello', (req, res, next) => {
+    console.log('in the middleware')
+    res.send('hello')
 })
 
 
-const server = http.createServer(app)
+
+
+
 
 server.listen(3000)
